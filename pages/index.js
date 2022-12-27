@@ -22,7 +22,6 @@ export default function Home() {
   const loading = useSelector((state)=> state.posts)
   const [page , setPage] = useState(1)
 
-  console.log(posts , "allposts")
 
   useEffect(()=>{
     dispatch(getPosts(page))
@@ -32,12 +31,10 @@ export default function Home() {
     const element = document.getElementById('mylist');
     if(element){
       if((Math.ceil(element.getBoundingClientRect().bottom) -1) === window.innerHeight) {
-        console.log("bottom reached" , page)
         let a = page + 1
         setPage(a)
       }
       if ((Math.ceil(element.getBoundingClientRect().bottom)) === window.innerHeight) {
-        console.log("bottom reached" , page)
         let a = page + 1
         setPage(a)
       }
@@ -60,7 +57,6 @@ export default function Home() {
         <div className="main_page">
           <Main_Header />
         </div>
-        {console.log(posts.loading , "posts.loading")}
 
       {posts.loading && page == 1 ? <h1>loading...</h1> : <div id="mylist">
         { posts.allPosts && posts.allPosts.map((post ,index)=>{

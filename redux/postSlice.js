@@ -26,9 +26,6 @@ const postSlice = createSlice({
         },
         [getPosts.fulfilled] : (state , action)=>{
             state.loading=false;
-            console.log(action.payload , "apires" , state.allPosts)
-            console.log(...action.payload , "apiresapiresapires")
-            
             state.allPosts = [...state.allPosts ,...action.payload]
         } ,
         [getPosts.rejected]: (state , action)=>{

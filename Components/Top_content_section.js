@@ -13,12 +13,6 @@ const Top_content_section = (props) => {
                 <img src={data?.user?.profile_image?.small   } />
             </div>
             <div className="text_image_contemt_section">
-                {/* <h1>
-                    {data.user.name}<img src={Diamond }/>
-                    <span> . Follow</span>
-                </h1>
-           
-                <p>2 months</p> */}
                 <div style={{display:"flex"}}>
                     <h3 style={{paddingBottom:"0" , whiteSpace:"nowrap"}}>{data?.user?.name}</h3>
                     <img src={Diamond }/>

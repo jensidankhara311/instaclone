@@ -19,9 +19,6 @@ const Main_Header = () => {
     const res = await  fetch(`https://api.unsplash.com/search/photos/?client_id=PWuLcm4KmXnbpPzmhzKRrI8iPFZt1gry5kar_-lu7lg&query=${search}&page=2`)
     const data = await res.json()
     setSearchPosts(data)
-
-    // dispatch(setSearchDataInPosts())
-    console.log(data , "data");
   }
 
   const handleChange = (e)=>{
@@ -52,7 +49,6 @@ const Main_Header = () => {
           </div>
         </div>
       </div>
-  
   )
 }
 
