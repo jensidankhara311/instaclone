@@ -12,7 +12,7 @@ const Main_Header = () => {
 
   const dispatch = useDispatch()
   
-  const [search , setSearch] = React.useState('office')
+  const [search , setSearch] = React.useState('')
   const [searchPosts , setSearchPosts] = React.useState([])
 
   const fetchApi  = async ()=>{
