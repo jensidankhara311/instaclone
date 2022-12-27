@@ -8,7 +8,6 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  
 
   --primary-glow: conic-gradient(from 180deg at 50% 50%,
       #16abff33 0deg,
@@ -96,11 +95,6 @@ a {
 
 
 .header_main .myheader {
-  /* width: 100%;
-  max-width: 1450px;
-  margin: auto;
-  overflow: hidden;
-  clear: both; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -118,20 +112,13 @@ a {
   display: inline-block;
 }
 
-.left_logo_header {
-  /* width: 20%; */
-  /* float: left; */
-}
 
 .left_logo_header img {
   max-width: 130px;
 }
 
 .search_header {
-  /* width: 60%; */
-  /* float: left; */
   position: relative;
-  /* display: flex; */
   width: 43%;
   margin: 0 15px;
 }
@@ -164,7 +151,6 @@ a {
 
 .main_post_content_section {
   width: 80%;
-  /* background: rgb(225, 225, 225); */
   margin: 0 auto;
   max-width: 800px;
 }
@@ -184,8 +170,6 @@ a {
   margin: 20px 0;
   float: left;
   box-shadow: 0px 0px 5px 1px lightgray;
-
-  /* padding-top: 20px; */
 }
 
 .post_header_section{
@@ -211,12 +195,6 @@ a {
   align-items: center;
 }
 
-.text_image_contemt_section {
-  /* float: left; */
-  /* width: 50%; */
-  /* padding: 10px 10px 0 10px; */
-}
-
 .text_image_contemt_section img {
   border-radius: 40px;
   background-color: blueviolet;
@@ -231,7 +209,6 @@ a {
 }
 .inner_heder_post_section {
   width: 100%;
-  /* max-width: 900px; */
   padding:15px;
   margin: auto;
   overflow: hidden;
@@ -245,13 +222,6 @@ a {
 .text_image_contemt_section span {
   color: #8a2be2;
   font-size: 20px;
-
-}
-
-.right_section_post {
-  /* float: right; */
-  /* width: 8%; */
-  /* padding-top: 10px; */
 }
 
 .right_section_post img {
@@ -267,7 +237,6 @@ a {
 
 .post_image_section_content img {
   padding: 9px 0;
-  /* width: 900px; */
   width: 100%;
   max-height: 900px;
 }
@@ -281,7 +250,6 @@ a {
 .right_icon_header {
   float: right;
 }
-
 
 .bottom_post_section_content {
   width: 100%;
@@ -347,7 +315,6 @@ a {
   padding: 8px 6px;
   display: flex;
   align-items: center;
-  /* width: 21%; */
 }
 .save_right_section_post_bottom_section img{
   width: 25px;
