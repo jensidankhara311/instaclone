@@ -8,7 +8,7 @@ const Botton_Right_Section = () => {
                 <div className="right_section_top_tip_dollar">
                     <img src={Icon_dollar} />
                 </div>
-                <p>Send Tip</p>     
+                <p>Send Tip</p>
             </div>
             <div className="save_right_section_post_bottom_section">
                 <img src="images/save-instagram.png" />

@@ -3,10 +3,7 @@ import { Diamond } from '../lib/config'
 import { UserProfile } from '../lib/config'
 
 const Top_content_section = (props) => {
-
     const {data} = props;
-    console.log(data ,)
-
     return (
         <div className="main_profail_content">
             <div className="left_section_post">
