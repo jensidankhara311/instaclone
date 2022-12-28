@@ -93,7 +93,6 @@ a {
   }
 }
 
-
 .header_main .myheader {
   display: flex;
   justify-content: space-between;
@@ -238,7 +237,9 @@ a {
 .post_image_section_content img {
   padding: 9px 0;
   width: 100%;
-  max-height: 900px;
+  height: 500pxc;
+  height: 516px;
+  object-fit: contain;
 }
 
 .right_icon_header img {

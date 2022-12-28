@@ -37,9 +37,7 @@ export default function Home() {
         setPage(a)
       }
     }
-
   }
-
   useEffect(() => {
     document.addEventListener('scroll', handleScroll);
   })
@@ -53,7 +51,7 @@ export default function Home() {
       </Head>
       <div className={inter.className}>
         <div className="main_page">
-          <Main_Header />
+          <Main_Header />     
         </div>
         {posts.loading && page == 1 ? <h1>loading...</h1> : <div id="mylist">
           {posts.allPosts && posts.allPosts.map((post, index) => {
@@ -74,6 +72,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+                
               </div>
             )
           })}
