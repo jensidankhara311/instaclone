@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react"
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
 import Main_Header from "../Components/Main_Header";
 import Top_content_section from "../Components/Top_content_section";
 import Right_content_section from "../Components/Right_content_section";
@@ -11,15 +10,22 @@ import Botton_Right_Section from "../Components/Botton_Right_Section";
 import Main_Post_section from "../Components/Main_Post_section";
 import { useDispatch, useSelector } from "react-redux";
 import { getPosts } from "../redux/postSlice";
+import { getSearchValue } from "../redux/photosSlice";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-
+  // for posts
   const dispatch = useDispatch()
   const posts = useSelector((state) => state.posts)
   const loading = useSelector((state) => state.posts)
+  const [isSearch, setIsSearch] = useState(false)
+  const [search, setSearch] = useState('')
   const [page, setPage] = useState(1)
+
+  // for searchImages
+  const allSearchImages = useSelector((state) => state.searchPhotos)
+  console.log(allSearchImages, "allImagesallImages")
 
   useEffect(() => {
     dispatch(getPosts(page))
@@ -41,6 +47,14 @@ export default function Home() {
   useEffect(() => {
     document.addEventListener('scroll', handleScroll);
   })
+  useEffect(() => {
+    if (search === "") {
+      setIsSearch(false)
+    }
+    dispatch(getSearchValue(search))
+
+  }, [search])
+  console.log(isSearch, "isSearch")
   return (
     <>
       <Head>
@@ -51,32 +65,54 @@ export default function Home() {
       </Head>
       <div className={inter.className}>
         <div className="main_page">
-          <Main_Header />     
+          <Main_Header setIsSearch={setIsSearch} isSearch={isSearch} search={search} setSearch={setSearch} />
         </div>
-        {posts.loading && page == 1 ? <h1>loading...</h1> : <div id="mylist">
-          {posts.allPosts && posts.allPosts.map((post, index) => {
-            return (
-              <div key={index} className="main_post_content_section">
-                <div className="wrapper">
-                  <div className="inner_main_post_content_section">
-                    <div className="inner_heder_post_section">
-                      <div className="post_header_section">
-                        <Top_content_section data={post} />
-                        <Right_content_section data={post} />
+
+        {isSearch ?
+          <div>
+            <div className="search_page_bottom_section">
+              <div className="wrapper">
+                <div style={{ display: "flex", flexWrap: "wrap" }}>
+                  {allSearchImages && allSearchImages.allImages.map((data, index) => {
+                    return (
+                      <div key={index}>
+                        <div className="search_post_page_section" >
+                          <img src={data.urls.small} />
+                        </div>
                       </div>
-                      <Main_Post_section data={post} />
-                      <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                        <Bottom_Post_section data={post} />
-                        <Botton_Right_Section data={post} />
+                    )
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+          :
+          <>
+            {posts.loading && page == 1 ? <h1>loading...</h1> : <div id="mylist">
+              {posts.allPosts && posts.allPosts.map((post, index) => {
+                return (
+                  <div key={index} className="main_post_content_section">
+                    <div className="wrapper">
+                      <div className="inner_main_post_content_section">
+                        <div className="inner_heder_post_section">
+                          <div className="post_header_section">
+                            <Top_content_section data={post} />
+                            <Right_content_section data={post} />
+                          </div>
+                          <Main_Post_section data={post} />
+                          <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                            <Bottom_Post_section data={post} />
+                            <Botton_Right_Section data={post} />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                
-              </div>
-            )
-          })}
-        </div>
+                )
+              })}
+            </div>
+            }
+          </>
         }
       </div>
     </>

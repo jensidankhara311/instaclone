@@ -330,6 +330,35 @@ a {
   margin-left: 10px;
 }
 
+.search_page_bottom_section{
+  display: grid;
+  padding: 10px;
+}
+.search_page_bottom_section .wrapper{
+  width: 100%;
+max-width: 1800px;
+  margin: auto;
+  overflow: hidden;
+  clear: both;
+}
+.search_post_page_section{
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+
+}
+.inner_secrch_post_page{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search_post_page_section img{
+  object-fit: cover;
+  height:300px;
+  width:300px;
+
+}
+
 @media (max-width:700px) {
   .main_post_content_section{
     width: 97%;

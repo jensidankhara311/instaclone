@@ -6,7 +6,7 @@ export const getPosts = createAsyncThunk("/", async (page) => {
 
 const initialState = {
     allPosts: [],
-    loading: false
+    loading: false,
 }
 
 const postSlice = createSlice({
@@ -15,7 +15,7 @@ const postSlice = createSlice({
     reducers: {
         setPostsData(state, action) {
             return [...state.allPosts, ...action.payload]
-        }, 
+        },
     },
     extraReducers: {
         [getPosts.pending]: (state, action) => {
@@ -27,9 +27,9 @@ const postSlice = createSlice({
         },
         [getPosts.rejected]: (state, action) => {
             state.loading = false;
-        }
+        },
     }
 })
 
-export const { setPostsData, setSearchDataInPosts } = postSlice.actions
+export const { setPostsData, } = postSlice.actions;
 export default postSlice.reducer
