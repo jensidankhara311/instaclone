@@ -129,8 +129,9 @@ a {
   left: 19px;
 
 }
-.search_header input::placeholder{
-   font-size: 16px;
+
+.search_header input::placeholder {
+  font-size: 16px;
 }
 
 .search_header input {
@@ -171,7 +172,7 @@ a {
   box-shadow: 0px 0px 5px 1px lightgray;
 }
 
-.post_header_section{
+.post_header_section {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -189,7 +190,7 @@ a {
   float: left;
 }
 
-.main_profail_content{
+.main_profail_content {
   display: flex;
   align-items: center;
 }
@@ -202,13 +203,15 @@ a {
   margin-left: 3px;
   padding: 3px;
 }
-.text_image_contemt_section p{
-    font-size: 16px;
-    margin-left: 3px;
+
+.text_image_contemt_section p {
+  font-size: 16px;
+  margin-left: 3px;
 }
+
 .inner_heder_post_section {
   width: 100%;
-  padding:15px;
+  padding: 15px;
   margin: auto;
   overflow: hidden;
   clear: both;
@@ -293,12 +296,13 @@ a {
 }
 
 
-.right_content_section_botton_post{
+.right_content_section_botton_post {
   width: 100%;
   display: flex;
   justify-content: end;
   text-align: center;
 }
+
 .right_section_top_tip_dollar img {
   width: 18px;
   background: white;
@@ -306,10 +310,12 @@ a {
   margin-right: 6px;
   margin-left: 3px;
 }
-.right_section_top_tip p{
+
+.right_section_top_tip p {
   color: white;
   font-size: 15px;
 }
+
 .right_section_top_tip {
   background-color: #8a2be2;
   border-radius: 40px;
@@ -317,50 +323,57 @@ a {
   display: flex;
   align-items: center;
 }
-.save_right_section_post_bottom_section img{
+
+.save_right_section_post_bottom_section img {
   width: 25px;
   margin-top: 5px;
 }
-.right_section_top_tip_dollar{
+
+.right_section_top_tip_dollar {
   display: flex;
   text-align: center;
   align-items: center;
 }
-.save_right_section_post_bottom_section{
+
+.save_right_section_post_bottom_section {
   margin-left: 10px;
 }
 
-.search_page_bottom_section{
+.search_page_bottom_section {
   display: grid;
-  padding: 10px;
+  grid-template-columns: auto auto auto auto;
+  padding: 0 6%;
 }
-.search_page_bottom_section .wrapper{
+
+.search_page_bottom_section .wrapper {
   width: 100%;
-max-width: 1800px;
-  margin: auto;
+  max-width: 1800px;
+  margin: 0 auto;
   overflow: hidden;
   clear: both;
 }
-.search_post_page_section{
+
+.search_post_page_section {
   padding: 20px;
   font-size: 30px;
   text-align: center;
+  margin: 0 auto;
 
 }
-.inner_secrch_post_page{
+
+.inner_secrch_post_page {
   display: flex;
   flex-wrap: wrap;
 }
 
-.search_post_page_section img{
+.search_post_page_section img {
   object-fit: cover;
-  height:300px;
-  width:300px;
-
+  height: 300px;
+  width: 300px;
 }
 
 @media (max-width:700px) {
-  .main_post_content_section{
+  .main_post_content_section {
     width: 97%;
   }
 }
