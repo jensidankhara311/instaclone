@@ -14,16 +14,12 @@ const postSlice = createSlice({
     initialState,
     reducers: {
         setPostsData(state, action) {
-            return state.allPosts.push(action.payload)
-        },
-        setSearchDataInPosts(state, action) {
-            return state.allPosts
-        }
+            return [...state.allPosts, ...action.payload]
+        }, 
     },
     extraReducers: {
         [getPosts.pending]: (state, action) => {
             state.loading = true;
-
         },
         [getPosts.fulfilled]: (state, action) => {
             state.loading = false;
