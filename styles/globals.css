@@ -342,7 +342,8 @@ a {
 .search_page_bottom_section {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  padding: 0 6%;
+  
+ 
 }
 
 .search_page_bottom_section .wrapper {
@@ -364,6 +365,11 @@ a {
 .inner_secrch_post_page {
   display: flex;
   flex-wrap: wrap;
+}
+.post_image_page_section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .search_post_page_section img {

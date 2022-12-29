@@ -72,7 +72,7 @@ export default function Home() {
           <div>
             <div className="search_page_bottom_section">
               <div className="wrapper">
-                <div style={{ display: "flex", flexWrap: "wrap" }}>
+                <div className="post_image_page_section">
                   {allSearchImages && allSearchImages.allImages.map((data, index) => {
                     return (
                       <div key={index}>
