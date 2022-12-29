@@ -67,7 +67,6 @@ export default function Home() {
         <div className="main_page">
           <Main_Header setIsSearch={setIsSearch} isSearch={isSearch} search={search} setSearch={setSearch} />
         </div>
-
         {isSearch ?
           <div>
             <div className="search_page_bottom_section">

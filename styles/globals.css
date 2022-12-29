@@ -22,6 +22,11 @@ a {
   padding: 30px 10%;
 }
 
+#mylist {
+  background: rgb(246, 246, 246);
+  margin-top: 5%;
+}
+
 .main_page {
   width: 100%;
   display: inline-block;
@@ -31,6 +36,13 @@ a {
   width: 100%;
   background: white;
   display: inline-block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.left_logo_header {
+  cursor: pointer;
 }
 
 .left_logo_header img {
@@ -44,15 +56,15 @@ a {
 }
 
 .search_header img {
-  width: 18px;
+  width: 13px;
   position: absolute;
-  top: 17px;
-  left: 19px;
+  top: 11px;
+  left: 16px;
 
 }
 
 .search_header input::placeholder {
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .search_header input {
@@ -60,7 +72,7 @@ a {
   background: rgb(233, 233, 233);
   border-radius: 40px;
   color: black;
-  padding: 18px 10px;
+  padding: 10px 10px;
   padding-left: 50px;
   border: none;
 }
@@ -102,6 +114,7 @@ a {
 .left_section_post {
   float: left;
   padding: 5px;
+  cursor: pointer;
 }
 
 .left_section_post img {
@@ -128,6 +141,7 @@ a {
 .text_image_contemt_section p {
   font-size: 16px;
   margin-left: 3px;
+  cursor: pointer;
 }
 
 .inner_heder_post_section {
@@ -149,6 +163,7 @@ a {
 
 .right_section_post img {
   width: 25px;
+  cursor: pointer;
 }
 
 .post_image_section_content {
@@ -168,8 +183,9 @@ a {
 
 .right_icon_header img {
   width: 22px;
-  margin-right: 15px;
+  margin-right: 25px;
   padding-top: 10px;
+  cursor: pointer;
 }
 
 .right_icon_header {
@@ -186,11 +202,11 @@ a {
   justify-content: center;
   align-items: center;
   margin-right: 10px;
-
 }
 
 .like_section_post img {
   width: 20px;
+  cursor: pointer;
 }
 
 .like_section_post p {
@@ -201,6 +217,7 @@ a {
 
 .comments_section_post img {
   width: 20px;
+  cursor: pointer;
 }
 
 .comments_section_post {
@@ -243,11 +260,13 @@ a {
   padding: 8px 6px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .save_right_section_post_bottom_section img {
   width: 25px;
   margin-top: 5px;
+
 }
 
 .right_section_top_tip_dollar {
@@ -258,13 +277,12 @@ a {
 
 .save_right_section_post_bottom_section {
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .search_page_bottom_section {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  
- 
 }
 
 .search_page_bottom_section .wrapper {
@@ -286,7 +304,8 @@ a {
   display: flex;
   flex-wrap: wrap;
 }
-.post_image_page_section{
+
+.post_image_page_section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -296,10 +315,4 @@ a {
   object-fit: cover;
   height: 300px;
   width: 300px;
-}
-
-@media (max-width:700px) {
-  .main_post_content_section {
-    width: 97%;
-  }
 }
