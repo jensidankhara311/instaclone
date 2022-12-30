@@ -42,6 +42,8 @@ export default function Home() {
       }
     }
   }
+
+
   useEffect(() => {
     document.addEventListener('scroll', handleScroll);
   })
@@ -84,7 +86,7 @@ export default function Home() {
           </div>
           :
           <>
-            {posts.loading && page == 1 ? <h1>loading...</h1> : <div id="mylist">
+            {posts.loading && page == 1 ? <div style={{position:"absolute" , height:"100vh" , width:"100vw",display:"flex" , justifyContent:"center" , alignItems:"center" , background:"rgba(0,0,0,0.4)" , top:"0"}}><h1>Loading...</h1></div>  : <div id="mylist">
               {posts.allPosts && posts.allPosts.map((post, index) => {
                 return (
                   <div key={index} className="main_post_content_section">

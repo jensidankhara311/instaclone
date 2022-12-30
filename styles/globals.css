@@ -81,6 +81,15 @@ a {
   color: black;
 
 }
+.close_icon_search_section img{
+ width: 10px;
+}
+.close_icon_search_section{
+  position: absolute;
+    top: 1px;
+    right: 44px;
+    cursor: pointer;
+}
 
 .main_post_content_section {
   width: 80%;

@@ -6,10 +6,11 @@ import { Chat } from '../lib/config'
 import { PostProfile } from '../lib/config'
 import { Search_icon } from '../lib/config'
 import { useDispatch } from 'react-redux'
+import { search_close_icon } from '../lib/config'
 import Link from 'next/link'
 
 const Main_Header = (props) => {
-  const {setIsSearch , isSearch ,search , setSearch } = props
+  const { setIsSearch, isSearch, search, setSearch } = props
 
   const dispatch = useDispatch()
 
@@ -17,6 +18,7 @@ const Main_Header = (props) => {
     setSearch(e.target.value)
     setIsSearch(true)
   }
+
   return (
     <div>
       <div className="header_main">
@@ -24,10 +26,16 @@ const Main_Header = (props) => {
           <div className="left_logo_header">
             <img src={mainlogo} />
           </div>
+
           <div className="search_header">
             <img src={Search_icon} />
-            <input value={search} onChange={handleChange} name="inputValue" type="text" placeholder="Search" style={{outline:"none"}} />
+            <input value={search} onChange={handleChange} name="inputValue" type="text" placeholder="Search" style={{ outline: "none" }} />
+             {search.length >0  ? <div className='close_icon_search_section'>
+                <img src={search_close_icon} onClick={()=> setSearch("")} />
+              </div> : null }
+             
           </div>
+          
           <div className="right_icon_header">
             <img src={Notes} />
             <img
