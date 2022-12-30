@@ -17,9 +17,6 @@ const Main_Header = (props) => {
     setSearch(e.target.value)
     setIsSearch(true)
   }
-  // useEffect(() => {
-  //   dispatch(getSearchValue(search))
-  // }, [search])
   return (
     <div>
       <div className="header_main">
@@ -27,7 +24,6 @@ const Main_Header = (props) => {
           <div className="left_logo_header">
             <img src={mainlogo} />
           </div>
-
           <div className="search_header">
             <img src={Search_icon} />
             <input value={search} onChange={handleChange} name="inputValue" type="text" placeholder="Search" style={{outline:"none"}} />
@@ -44,22 +40,6 @@ const Main_Header = (props) => {
           </div>
         </div>
       </div>
-      {/* {searchPosts.map((data, index) => {
-        return (
-          <div>
-            <div className="search_page_bottom_section">
-              <div className="wrapper">
-                <div className="inner_Secrch_post_section">
-                  <div className="image_post_search_section">
-                    <img src="images/I2.jpg" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )
-      })} */}
-
     </div>
 
   )

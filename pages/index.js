@@ -18,14 +18,12 @@ export default function Home() {
   // for posts
   const dispatch = useDispatch()
   const posts = useSelector((state) => state.posts)
-  const loading = useSelector((state) => state.posts)
   const [isSearch, setIsSearch] = useState(false)
   const [search, setSearch] = useState('')
   const [page, setPage] = useState(1)
 
   // for searchImages
   const allSearchImages = useSelector((state) => state.searchPhotos)
-  console.log(allSearchImages, "allImagesallImages")
 
   useEffect(() => {
     dispatch(getPosts(page))
@@ -54,7 +52,6 @@ export default function Home() {
     dispatch(getSearchValue(search))
 
   }, [search])
-  console.log(isSearch, "isSearch")
   return (
     <>
       <Head>
